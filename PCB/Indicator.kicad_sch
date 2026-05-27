@@ -603,7 +603,7 @@
 	)
 	(text "POWER"
 		(exclude_from_sim no)
-		(at 51.054 49.53 0)
+		(at 23.114 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -613,7 +613,7 @@
 	)
 	(text "0402\n"
 		(exclude_from_sim no)
-		(at 77.724 34.544 0)
+		(at 78.994 34.544 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -623,7 +623,7 @@
 	)
 	(text "STATUS"
 		(exclude_from_sim no)
-		(at 27.94 49.53 0)
+		(at 49.53 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -633,7 +633,7 @@
 	)
 	(text "0402\n"
 		(exclude_from_sim no)
-		(at 32.004 34.544 0)
+		(at 53.594 34.544 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -643,7 +643,7 @@
 	)
 	(text "ACTIVITY"
 		(exclude_from_sim no)
-		(at 73.66 49.53 0)
+		(at 74.93 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -653,7 +653,7 @@
 	)
 	(text "0402\n"
 		(exclude_from_sim no)
-		(at 54.864 34.544 0)
+		(at 26.924 34.544 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -663,7 +663,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 43.18) (xy 27.94 44.45)
+			(xy 49.53 44.45) (xy 49.53 45.72)
 		)
 		(stroke
 			(width 0)
@@ -673,7 +673,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 27.94) (xy 73.66 26.67)
+			(xy 74.93 27.94) (xy 74.93 26.67)
 		)
 		(stroke
 			(width 0)
@@ -683,7 +683,7 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 27.94) (xy 27.94 26.67)
+			(xy 49.53 27.94) (xy 49.53 26.67)
 		)
 		(stroke
 			(width 0)
@@ -693,7 +693,17 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 43.18) (xy 73.66 44.45)
+			(xy 49.53 36.83) (xy 49.53 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47fbe773-15f5-4a95-b12e-54db9d0e8780")
+	)
+	(wire
+		(pts
+			(xy 74.93 44.45) (xy 74.93 45.72)
 		)
 		(stroke
 			(width 0)
@@ -703,7 +713,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 43.18) (xy 50.8 44.45)
+			(xy 22.86 44.45) (xy 22.86 45.72)
 		)
 		(stroke
 			(width 0)
@@ -713,7 +723,17 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 27.94) (xy 50.8 26.67)
+			(xy 74.93 36.83) (xy 74.93 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb3c09c4-17e9-4db6-a45d-5e6448e9dd3c")
+	)
+	(wire
+		(pts
+			(xy 22.86 27.94) (xy 22.86 26.67)
 		)
 		(stroke
 			(width 0)
@@ -721,9 +741,19 @@
 		)
 		(uuid "c436ffc4-72a3-464e-9cfa-ffa425a8230c")
 	)
+	(wire
+		(pts
+			(xy 22.86 36.83) (xy 22.86 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9eacb12-034c-46a2-b95d-2483237983dd")
+	)
 	(global_label "PC13"
 		(shape bidirectional)
-		(at 27.94 26.67 90)
+		(at 49.53 26.67 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -732,7 +762,7 @@
 		)
 		(uuid "45791067-5c77-4a7f-9de2-e5b47ab3145a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 27.94 26.67 90)
+			(at 49.53 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -745,7 +775,7 @@
 	)
 	(global_label "PA8"
 		(shape bidirectional)
-		(at 73.66 26.67 90)
+		(at 74.93 26.67 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -754,7 +784,7 @@
 		)
 		(uuid "c99502cc-de26-4d23-aacb-43e3caa38497")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 73.66 26.67 90)
+			(at 74.93 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -767,7 +797,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 50.8 39.37 90)
+		(at 22.86 40.64 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -778,7 +808,7 @@
 		(fields_autoplaced yes)
 		(uuid "0cab4763-ba81-4f0d-96bf-9ec7c38b060b")
 		(property "Reference" "D7"
-			(at 54.61 39.6874 90)
+			(at 26.67 40.9574 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -789,7 +819,7 @@
 			)
 		)
 		(property "Value" "LED_GREEN"
-			(at 54.61 42.2274 90)
+			(at 26.67 43.4974 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -800,7 +830,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 50.8 39.37 0)
+			(at 22.86 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -811,7 +841,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 39.37 0)
+			(at 22.86 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -822,7 +852,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 50.8 39.37 0)
+			(at 22.86 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -833,7 +863,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 50.8 39.37 0)
+			(at 22.86 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -860,7 +890,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 50.8 44.45 0)
+		(at 22.86 45.72 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -870,8 +900,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0f316ac4-a32a-4caa-bf57-3e461f52eb6c")
-		(property "Reference" "#PWR021"
-			(at 50.8 50.8 0)
+		(property "Reference" "#PWR0174"
+			(at 22.86 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -882,7 +912,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 50.8 49.53 0)
+			(at 22.86 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -893,7 +923,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 44.45 0)
+			(at 22.86 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -904,7 +934,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 44.45 0)
+			(at 22.86 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -915,7 +945,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 50.8 44.45 0)
+			(at 22.86 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -931,7 +961,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "#PWR021")
+					(reference "#PWR0174")
 					(unit 1)
 				)
 			)
@@ -939,7 +969,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 27.94 44.45 0)
+		(at 49.53 45.72 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -949,8 +979,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1fbdca84-3fa6-4d4f-8736-d43f353878e5")
-		(property "Reference" "#PWR020"
-			(at 27.94 50.8 0)
+		(property "Reference" "#PWR0175"
+			(at 49.53 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -961,7 +991,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 27.94 49.53 0)
+			(at 49.53 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -972,7 +1002,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 27.94 44.45 0)
+			(at 49.53 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -983,7 +1013,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 44.45 0)
+			(at 49.53 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -994,7 +1024,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 27.94 44.45 0)
+			(at 49.53 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1010,7 +1040,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "#PWR020")
+					(reference "#PWR0175")
 					(unit 1)
 				)
 			)
@@ -1018,7 +1048,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 27.94 31.75 0)
+		(at 49.53 31.75 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1027,8 +1057,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "25ba1cf7-0fb8-4f20-89d4-1b82e12bf00a")
-		(property "Reference" "R9"
-			(at 29.464 29.21 0)
+		(property "Reference" "R41"
+			(at 51.054 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1039,7 +1069,7 @@
 			)
 		)
 		(property "Value" "1kR"
-			(at 29.464 31.75 0)
+			(at 51.054 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1050,7 +1080,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 26.162 31.75 90)
+			(at 47.752 31.75 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1061,7 +1091,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 31.75 0)
+			(at 49.53 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1072,7 +1102,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 27.94 31.75 0)
+			(at 49.53 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1091,7 +1121,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "R9")
+					(reference "R41")
 					(unit 1)
 				)
 			)
@@ -1099,7 +1129,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 73.66 31.75 0)
+		(at 74.93 31.75 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1108,8 +1138,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4e84f718-fafd-4f79-ae71-13a0c5075df2")
-		(property "Reference" "R11"
-			(at 75.184 29.21 0)
+		(property "Reference" "R42"
+			(at 76.454 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1120,7 +1150,7 @@
 			)
 		)
 		(property "Value" "390R"
-			(at 75.184 31.75 0)
+			(at 76.454 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1131,7 +1161,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 71.882 31.75 90)
+			(at 73.152 31.75 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1142,7 +1172,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 31.75 0)
+			(at 74.93 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1153,7 +1183,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 73.66 31.75 0)
+			(at 74.93 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1172,7 +1202,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "R11")
+					(reference "R42")
 					(unit 1)
 				)
 			)
@@ -1180,7 +1210,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 50.8 26.67 0)
+		(at 22.86 26.67 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1190,8 +1220,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bcf92c15-fa4e-4135-baa8-f69ec23bcdaf")
-		(property "Reference" "#PWR022"
-			(at 50.8 30.48 0)
+		(property "Reference" "#PWR0173"
+			(at 22.86 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1202,7 +1232,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 50.8 21.59 0)
+			(at 22.86 21.59 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1212,7 +1242,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 26.67 0)
+			(at 22.86 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1223,7 +1253,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 26.67 0)
+			(at 22.86 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1234,7 +1264,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 50.8 26.67 0)
+			(at 22.86 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1250,7 +1280,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "#PWR022")
+					(reference "#PWR0173")
 					(unit 1)
 				)
 			)
@@ -1258,7 +1288,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 73.66 39.37 90)
+		(at 74.93 40.64 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1268,8 +1298,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c7a4f9e9-1c34-4d75-a418-dbde87cb0bd9")
-		(property "Reference" "D8"
-			(at 77.47 39.6874 90)
+		(property "Reference" "D9"
+			(at 78.74 40.9574 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1280,7 +1310,7 @@
 			)
 		)
 		(property "Value" "LED_GREEN"
-			(at 77.47 42.2274 90)
+			(at 78.74 43.4974 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1291,7 +1321,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 73.66 39.37 0)
+			(at 74.93 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1302,7 +1332,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 39.37 0)
+			(at 74.93 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1313,7 +1343,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 73.66 39.37 0)
+			(at 74.93 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1324,7 +1354,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 73.66 39.37 0)
+			(at 74.93 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1343,7 +1373,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "D8")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -1351,7 +1381,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 50.8 31.75 0)
+		(at 22.86 31.75 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1360,8 +1390,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca8433ce-07de-4919-8654-a78b73791ffe")
-		(property "Reference" "R10"
-			(at 52.324 29.21 0)
+		(property "Reference" "R40"
+			(at 24.384 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1372,7 +1402,7 @@
 			)
 		)
 		(property "Value" "1.1kR"
-			(at 52.324 31.75 0)
+			(at 24.384 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1383,7 +1413,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 49.022 31.75 90)
+			(at 21.082 31.75 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1394,7 +1424,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 31.75 0)
+			(at 22.86 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1405,7 +1435,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 50.8 31.75 0)
+			(at 22.86 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1424,7 +1454,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "R10")
+					(reference "R40")
 					(unit 1)
 				)
 			)
@@ -1432,7 +1462,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 27.94 39.37 90)
+		(at 49.53 40.64 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1442,8 +1472,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d1393b27-add1-461b-80b4-88012170b376")
-		(property "Reference" "D6"
-			(at 31.75 39.6874 90)
+		(property "Reference" "D8"
+			(at 53.34 40.9574 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1454,7 +1484,7 @@
 			)
 		)
 		(property "Value" "LED_RED"
-			(at 31.75 42.2274 90)
+			(at 53.34 43.4974 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1465,7 +1495,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 27.94 39.37 0)
+			(at 49.53 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1476,7 +1506,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 27.94 39.37 0)
+			(at 49.53 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1487,7 +1517,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 27.94 39.37 0)
+			(at 49.53 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1498,7 +1528,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 27.94 39.37 0)
+			(at 49.53 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1517,7 +1547,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "D6")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -1525,7 +1555,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 73.66 44.45 0)
+		(at 74.93 45.72 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1535,8 +1565,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9107ba2-9276-446d-ae5c-3ca72881e756")
-		(property "Reference" "#PWR025"
-			(at 73.66 50.8 0)
+		(property "Reference" "#PWR0176"
+			(at 74.93 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1547,7 +1577,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 73.66 49.53 0)
+			(at 74.93 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1558,7 +1588,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 73.66 44.45 0)
+			(at 74.93 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1569,7 +1599,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 73.66 44.45 0)
+			(at 74.93 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1580,7 +1610,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 73.66 44.45 0)
+			(at 74.93 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1596,7 +1626,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "#PWR025")
+					(reference "#PWR0176")
 					(unit 1)
 				)
 			)

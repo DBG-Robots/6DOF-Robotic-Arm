@@ -76,6 +76,8 @@ Each driver has a dedicated 3-way solder jumper (`TMCX_SPREAD`) to select the ch
 
 Default: pulled HIGH (SpreadCycle).
 
+> **Friendly Reminder:** Always have exactly ONE Bridge between two pads! Keeping Spread floating will result in undefined behaviour and bridging all 3 Pads will short GND and +3V3, resulting in a useless piece of green fiberglass. We do not take responsibility for this happening and recommend always testing for a short after resoldering these solder bridges.
+
 ### CAN Bus — FDCAN1 with ISO1042DWVR Isolator
 
 CAN communication uses the STM32 FDCAN1 peripheral on PB8 (RX) and PB9 (TX), galvanically isolated via an ISO1042DWVR transceiver. The MCU side runs at 3.3 V; the bus side uses a 5 V isolated supply. Both supply pins carry 100 nF decoupling capacitors close to the IC.

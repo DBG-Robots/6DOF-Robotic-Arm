@@ -3916,7 +3916,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "21887ba0-9e5e-4871-823d-0ca5dc12a599")
-		(property "Reference" "H6"
+		(property "Reference" "H5"
 			(at 54.61 170.1799 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3977,7 +3977,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/2ee041d2-835d-4fc4-b3fc-43e28808df04"
-					(reference "H6")
+					(reference "H5")
 					(unit 1)
 				)
 			)
@@ -4759,7 +4759,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5510cddf-e285-43b3-9807-b5966ddf1994")
-		(property "Reference" "H5"
+		(property "Reference" "H6"
 			(at 54.61 165.0999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4820,7 +4820,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/2ee041d2-835d-4fc4-b3fc-43e28808df04"
-					(reference "H5")
+					(reference "H6")
 					(unit 1)
 				)
 			)

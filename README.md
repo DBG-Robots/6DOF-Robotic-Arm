@@ -1,4 +1,4 @@
-# 6DOF Robotic Arm — DBG-Robots
+# 6DOF Robotic Arm
 
 A 6 degree-of-freedom robotic arm built from scratch. The project covers the full hardware and software stack: a custom STM32-based motor controller PCB, 3D-printed mechanical structure, and embedded firmware.
 

@@ -61,9 +61,11 @@ Up to three drivers share a single UART line using the TMC2209 address selection
 
 Each driver exposes a STEP input driven by hardware PWM (TIM2/TIM3 channels), a DIR GPIO, and a shared active-low enable line per bank (TMC_A_ENN, TMC_B_ENN). DIAG outputs from all six drivers are wired to EXTI lines 10–15 on PORTB for simultaneous independent fault interrupts.
 
-Motor output pins (A1, A2, B1, B2 per driver) connect to screw terminals for direct stepper wiring.
+Motor output pins (A1, A2, B1, B2 per driver) connect to 5 mm pitch screw terminals for direct stepper wiring.
 
 Sense resistors are 0.11 Ω in 1206 package. Sustained motor current must not exceed 1.5 A per driver to stay within the 0.25 W resistor rating.
+
+The TMC2209 accepts 4.75 V to 29 V on its motor supply. The 24 V rail is protected by a TVS diode clamping at ~29 V to keep transient spikes within this limit, particularly relevant when running from a 6S LiPo (max 25.2 V fully charged).
 
 #### SPREAD Pin Configuration
 
@@ -74,13 +76,13 @@ Each driver has a dedicated 3-way solder jumper (`TMCX_SPREAD`) to select the ch
 | Pulled LOW (GND) | StealthChop2 — ultra-quiet operation |
 | Pulled HIGH (3V3) | SpreadCycle — maximum torque |
 
-Default: pulled HIGH (SpreadCycle).
+Default: pulled HIGH (SpreadCycle). A 100 Ω series resistor is placed between the 3V3 rail and pad 1 of each jumper to limit current in the event of accidental full bridge.
 
-> **Friendly Reminder:** Always have exactly ONE Bridge between two pads! Keeping Spread floating will result in undefined behaviour and bridging all 3 Pads will short GND and +3V3, resulting in a useless piece of green fiberglass. We do not take responsibility for this happening and recommend always testing for a short after resoldering these solder bridges.
+> **Friendly Reminder:** Always have exactly ONE bridge between two pads! Keeping SPREAD floating will result in undefined behaviour and bridging all 3 pads will short GND and +3V3, resulting in a useless piece of green fiberglass. We do not take responsibility for this happening and recommend always testing for a short after resoldering these solder bridges.
 
 ### CAN Bus — FDCAN1 with ISO1042DWVR Isolator
 
-CAN communication uses the STM32 FDCAN1 peripheral on PB8 (RX) and PB9 (TX), galvanically isolated via an ISO1042DWVR transceiver. The MCU side runs at 3.3 V; the bus side uses a 5 V isolated supply. Both supply pins carry 100 nF decoupling capacitors close to the IC.
+CAN communication uses the STM32 FDCAN1 peripheral on PB8 (RX) and PB9 (TX), galvanically isolated via an ISO1042DWVR transceiver. The MCU side runs at 3.3 V; the bus side uses a 5 V isolated supply. Both supply pins carry decoupling capacitors close to the IC.
 
 A 120 Ω termination resistor between CAN_H and CAN_L is present on the bus side, controlled by a solder bridge jumper (JP1). Close JP1 only if this board sits at a physical endpoint of the CAN bus. The default state is open.
 
@@ -92,28 +94,46 @@ The ISO1042 is rated for CAN FD up to 5 Mbps. The board is currently configured 
 
 ### Power System
 
-Two 24 V power inputs are accepted:
+Three 24 V power inputs feed the board, all ORed onto a shared 24 V bus:
 
-- **EXTERNAL_POWER** — sourced from the robot's main power distribution board via a 2-pin connector.
-- **Battery input** — XT60 female connector on-board.
+- **Robot power distribution board** — dedicated 2-pin connector from the robot's main power distribution board. Protected by a Schottky diode so no current can ever flow back into the distribution board, regardless of what else is connected.
+- **Battery** — XT60 female connector on-board, intended for 6S LiPo (22.2 V nominal, 25.2 V max fully charged). Protected by a Schottky diode in the same way.
+- **J_PWR24V** — 2-pin 5 mm screw terminal. Accepts a standard 24 V DC supply (e.g. wall adapter with bare wires) or any external 24 V source. Also usable as a 24 V output tap (e.g. for a hotend heater). **No diode protection on this connector** — it connects directly to the 24 V bus. Polarity is marked clearly on silkscreen. Observe carefully: reverse polarity here will damage the board.
 
-> **TODO:** Footprint for the EXTERNAL_POWER 2-pin connector is not yet selected — confirm and add to schematic.
+A fuse rated 15 A / 50 V is placed after the diodes, before the bus. Only one power source should be connected at a time.
 
-Both rails feed the 24 V bus through MBR1545 Schottky diodes to prevent back-feed. A 15 A / 32 V blade fuse follows both diodes. The 24 V rail powers the stepper drivers directly.
+#### 24 V Rail Protection
+
+The 24 V rail carries bulk decoupling and transient protection sized for the worst-case load of 6 simultaneously switching stepper drivers:
+
+- A large electrolytic bulk capacitor (1000 µF / 50 V) absorbs motor current transients
+- A ceramic capacitor in parallel handles high-frequency switching noise
+- A unidirectional TVS diode clamps transients to protect the TMC2209 drivers, which have a 29 V absolute maximum rating
 
 #### 3.3 V Regulation
 
-Two separate paths supply the 3.3 V rail depending on power source:
+Two separate paths supply the 3.3 V rail depending on power source. Both feed through a Schottky diode OR arrangement so neither source can back-feed the other.
 
-**XL4005E1 (24 V → 3.3 V), used during normal operation:**
+**Buck converter (24 V → 3.3 V), used during normal operation:**
 
-The XL4005E1 output is nominally ~3.65 V before the downstream SS14 Schottky diode. With approximately 0.30 V drop at 50 mA load, the STM32 VDD rail sits at approximately 3.35 V — within the 2.0 V–3.6 V operating range.
+The buck converter output is nominally ~3.65 V. With approximately 0.30 V drop across the downstream Schottky diode at typical load, the STM32 VDD rail sits at approximately 3.35 V — within the 2.0 V–3.6 V operating range.
 
-**NCP1117-3.3 SOT223 (USB 5 V → 3.3 V), used during debug/programming only:**
+**LDO (USB 5 V → 3.3 V), used during debug/programming only:**
 
-The NCP1117 output is 3.3 V. With the SS14 Schottky drop (~0.30 V at 50 mA), the STM32 VDD rail sits at approximately 3.0 V — still within the operating range, but marginal. The NCP1117 is low-efficiency, which is acceptable for the limited debug use case. USB power does not supply the motor drivers.
+The LDO output is 3.3 V. With the Schottky drop (~0.30 V at typical load), the STM32 VDD rail sits at approximately 3.0 V — still within the operating range, but marginal. The LDO is low-efficiency, which is acceptable for the limited debug use case. USB power does not supply the motor drivers.
 
 > If exactly 3.3 V is required at the MCU, replace the Schottky diode with an ideal diode circuit, or remove the debug USB power path entirely.
+
+#### 3.3 V Rail Filtering
+
+Given the noisy 24 V environment (6 switching stepper drivers), the 3.3 V rail carries additional filtering beyond a basic dev board:
+
+- A ferrite bead at the rail entry point attenuates noise before it reaches any VDD decoupling
+- A bulk reservoir capacitor handles load transients and converter lag
+- Three 100 nF ceramics provide per-pin HF decoupling on VDD
+- A second, higher-impedance ferrite bead further isolates the VDDA analog supply from VDD
+- VDDA carries both a 100 nF and a 1 µF capacitor per ST's reference design
+- VREF+ carries a 100 nF decoupling capacitor; a 0 Ω jumper allows VREF+ to be separated from VDDA if needed
 
 ### USB
 
@@ -183,13 +203,13 @@ All DIAG lines sit on unique EXTI lines, so all six can fire simultaneously with
 
 | Pin | Use |
 |---|---|
-| PA2 | 3-pin 2.54 mm header (BTN/FAN) |
+| PA2 | 3-pin 2.54 mm header (BTN/FAN/Thermistor) |
 | PB2 | 3-pin 2.54 mm header (BTN/FAN) |
 | PB7 | TIM4_CH2 — recommended for PWM fan control |
 
 Headers are 3-pin 2.54 mm (GND / Signal / 3V3) with 10 kΩ pullup on the signal line for a defined state when unplugged.
 
-> **TODO:** Add test points on expansion headers, key power rails, and critical IO paths.
+PA2 is additionally suitable as a thermistor input (ADC) — the 10 kΩ pullup acts as the upper half of a voltage divider. Standard 10 kΩ NTC thermistors connect between the PA2 signal pad and GND.
 
 ---
 
@@ -199,7 +219,7 @@ PB8 is shared between the FDCAN1_RX function and BOOT0. To free PB8 for CAN use 
 
 No physical BOOT or RESET button is fitted. NRST is accessible via pin 12 of the SWD header.
 
-A test pad (TP_PB8 / H19) is placed on the PCB for two purposes:
+A test pad (TP_PB8) is placed on the PCB for two purposes:
 
 1. Probing the CAN receive signal during bring-up.
 2. Emergency bootloader recovery on boards where nBOOT_SEL was not programmed correctly — hold TP_PB8 HIGH at power-on to force the ROM bootloader via USB DFU.
@@ -232,27 +252,39 @@ A test pad (TP_PB8 / H19) is placed on the PCB for two purposes:
 
 ## Test Points
 
-| Reference | Signal |
-|---|---|
-| H1 | GND |
-| H2 | +3V3 |
-| H3 | +24V |
-| H4 | VBUS |
-| H5 | CC1 |
-| H6 | CC2 |
-| H7, H9, H11, H13, H15, H17 | TMC1–6 DIAG |
-| H8, H10, H12, H14, H16, H18 | TMC1–6 INDEX |
-| H19 | TP_PB8 / BOOT0 — 1.5 mm round pad |
+All test points use 2.0 mm round pads for power rails and 1.0 mm round pads for signals, compatible with flying probe and pogo pin fixtures.
 
-> **TODO:** Add test points on expansion headers and remaining key power rails and IO paths.
+| Signal | Notes |
+|---|---|
+| GND | Power |
+| +3V3 | Power |
+| +24V | Power |
+| VBUS | Power |
+| CC1 | USB |
+| CC2 | USB |
+| TMC1–6 DIAG | One pad per driver |
+| TMC1–6 INDEX | One pad per driver |
+| TP_PB8 / BOOT0 | 1.5 mm round pad — CAN RX probe point and bootloader recovery |
+| VDDA | Analog supply, after the VDDA ferrite bead |
+| VREF+ | ADC reference rail |
+| SWDIO | Debug |
+| SWDCLK | Debug |
+| NRST | Reset |
+| CAN_H | Bus signal |
+| CAN_L | Bus signal |
+| CAN_GND | Bus ground reference |
+| CAN_UART_TX | ISO1042 MCU-side TX |
+| CAN_UART_RX | ISO1042 MCU-side RX |
+| TMC_UART1 | USART1 half-duplex line (motors 1–3) |
+| TMC_UART2 | USART2 half-duplex line (motors 4–6) |
+| SW_NODE | Buck converter switching node — for scope noise analysis during bring-up |
 
 ---
 
 ## Known Issues and Open Items
 
 - CAN connector pinout (Molex Pico-Lock 504050-0791) not yet defined for the robot-side harness.
-- EXTERNAL_POWER 2-pin connector footprint not yet selected.
-- Additional test points pending on expansion headers and power rails.
+- Connector for robot power distribution board not yet selected — footprint TBD.
 - FDCAN timing parameters need recalculation after SYSCLK is confirmed at 170 MHz.
 - PCB layout not started.
 - Firmware not started.

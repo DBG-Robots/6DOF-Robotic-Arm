@@ -900,7 +900,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0f316ac4-a32a-4caa-bf57-3e461f52eb6c")
-		(property "Reference" "#PWR0174"
+		(property "Reference" "#PWR042"
 			(at 22.86 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -961,7 +961,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "#PWR0174")
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -979,7 +979,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1fbdca84-3fa6-4d4f-8736-d43f353878e5")
-		(property "Reference" "#PWR0175"
+		(property "Reference" "#PWR043"
 			(at 49.53 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -1040,7 +1040,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "#PWR0175")
+					(reference "#PWR043")
 					(unit 1)
 				)
 			)
@@ -1057,7 +1057,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "25ba1cf7-0fb8-4f20-89d4-1b82e12bf00a")
-		(property "Reference" "R41"
+		(property "Reference" "R11"
 			(at 51.054 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1121,7 +1121,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "R41")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -1138,7 +1138,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4e84f718-fafd-4f79-ae71-13a0c5075df2")
-		(property "Reference" "R42"
+		(property "Reference" "R12"
 			(at 76.454 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1202,7 +1202,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "R42")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -1220,7 +1220,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bcf92c15-fa4e-4135-baa8-f69ec23bcdaf")
-		(property "Reference" "#PWR0173"
+		(property "Reference" "#PWR041"
 			(at 22.86 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -1280,7 +1280,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "#PWR0173")
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
@@ -1390,7 +1390,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca8433ce-07de-4919-8654-a78b73791ffe")
-		(property "Reference" "R40"
+		(property "Reference" "R10"
 			(at 24.384 29.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1454,7 +1454,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "R40")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -1565,7 +1565,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9107ba2-9276-446d-ae5c-3ca72881e756")
-		(property "Reference" "#PWR0176"
+		(property "Reference" "#PWR044"
 			(at 74.93 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -1626,7 +1626,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/b95fa2d1-f2ed-401b-b984-3832c1794be1"
-					(reference "#PWR0176")
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)

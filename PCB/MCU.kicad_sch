@@ -3771,28 +3771,6 @@
 			)
 		)
 	)
-	(global_label "TMC1_STEP"
-		(shape bidirectional)
-		(at 54.61 96.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2412416b-f618-433c-b0a7-789ab410e1c4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 54.61 96.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "NRST"
 		(shape bidirectional)
 		(at 50.8 55.88 180)
@@ -4521,6 +4499,28 @@
 			)
 		)
 	)
+	(global_label "TMC1_STEP"
+		(shape bidirectional)
+		(at 54.61 96.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d6552811-a80e-425a-b952-475367707efa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 54.61 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "TMC1_DIAG"
 		(shape bidirectional)
 		(at 105.41 101.6 0)
@@ -4688,7 +4688,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "00f24ac2-306f-4771-b884-b67560bc3684")
-		(property "Reference" "H8"
+		(property "Reference" "H4"
 			(at 185.928 131.064 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4749,7 +4749,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "H8")
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -4766,7 +4766,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0608be19-cdcc-44ee-a33b-d8e3632f9e5b")
-		(property "Reference" "H9"
+		(property "Reference" "H7"
 			(at 225.298 131.064 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4827,7 +4827,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "H9")
+					(reference "H7")
 					(unit 1)
 				)
 			)
@@ -4845,7 +4845,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0cf3d761-871c-4dd7-9d7b-4751baa547db")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR07"
 			(at 170.18 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -4905,7 +4905,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "#PWR02")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -4922,7 +4922,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "16fbd1a7-2943-4425-a1d1-8a71556332a8")
-		(property "Reference" "C5"
+		(property "Reference" "C7"
 			(at 215.138 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4986,7 +4986,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "C5")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -5004,7 +5004,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1ec1b164-c0f7-4183-ad98-dccb6200df35")
-		(property "Reference" "H5"
+		(property "Reference" "H1"
 			(at 25.4 95.25 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5063,7 +5063,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "H5")
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -5080,7 +5080,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4b7ca4f1-3f04-4994-a904-78675651ee8a")
-		(property "Reference" "C4"
+		(property "Reference" "C6"
 			(at 201.168 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5144,7 +5144,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "C4")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -5161,7 +5161,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "55ea3308-eb0f-42df-bab6-9b76dc9a9b0b")
-		(property "Reference" "C3"
+		(property "Reference" "C5"
 			(at 187.198 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5225,7 +5225,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "C3")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -5434,7 +5434,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "69866f96-bba1-48fc-bbb9-e8c5377216fd")
-		(property "Reference" "C10"
+		(property "Reference" "C3"
 			(at 152.4 192.786 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5496,7 +5496,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "C10")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -5514,7 +5514,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6d1fba2c-ab89-450f-a1cd-d3b120246e38")
-		(property "Reference" "R2"
+		(property "Reference" "R1"
 			(at 35.56 95.2499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5578,7 +5578,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "R2")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5595,7 +5595,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "71d8a119-a196-4092-a607-ca9ab6e56991")
-		(property "Reference" "C7"
+		(property "Reference" "C9"
 			(at 244.348 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5659,7 +5659,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "C7")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -5677,7 +5677,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "754dafd7-7e7d-4c6f-a34f-9baa4dfe7bc8")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR05"
 			(at 80.01 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -5738,7 +5738,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "#PWR06")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -5755,7 +5755,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "78d95bc4-8e97-4083-9dc3-db7e6ca0819d")
-		(property "Reference" "R1"
+		(property "Reference" "R2"
 			(at 247.65 67.564 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5817,7 +5817,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "R1")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -5835,7 +5835,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "808c8b88-e7e6-4ae8-97f6-c580ef9c1a44")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR06"
 			(at 158.75 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -5896,7 +5896,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "#PWR07")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -5992,7 +5992,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "82a06606-b993-45a2-986f-1814a8b8659e")
-		(property "Reference" "C6"
+		(property "Reference" "C8"
 			(at 231.648 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6056,7 +6056,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "C6")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -6073,7 +6073,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "845d75b8-6d1f-4eba-9bb8-bd31841efebd")
-		(property "Reference" "H7"
+		(property "Reference" "H6"
 			(at 225.298 124.714 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6134,7 +6134,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "H7")
+					(reference "H6")
 					(unit 1)
 				)
 			)
@@ -6151,7 +6151,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8d0f296e-5945-4ea0-8321-80a7c38e3ed2")
-		(property "Reference" "C2"
+		(property "Reference" "C4"
 			(at 173.228 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6215,7 +6215,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "C2")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -6233,7 +6233,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "92cdbce3-0967-4dca-8764-ee0a1e0fa033")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR02"
 			(at 39.37 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -6293,7 +6293,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "#PWR03")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -6312,7 +6312,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "99d3ed49-644e-4ef6-a2e2-d568e94c5a5e")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR01"
 			(at 33.02 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -6372,7 +6372,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "#PWR05")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -6390,7 +6390,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ad2c58bb-c60f-4cc6-a9c0-7367aed2e71e")
-		(property "Reference" "H1"
+		(property "Reference" "H5"
 			(at 196.85 29.2099 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6451,7 +6451,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "H1")
+					(reference "H5")
 					(unit 1)
 				)
 			)
@@ -6468,7 +6468,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ba1c1020-b0a4-498b-8e17-648e5f3c4bdb")
-		(property "Reference" "H6"
+		(property "Reference" "H3"
 			(at 185.928 124.714 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6529,7 +6529,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "H6")
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -6547,7 +6547,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba9c3ffe-75aa-4c34-8d88-1df45f616941")
-		(property "Reference" "H3"
+		(property "Reference" "H8"
 			(at 234.95 69.8499 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6608,7 +6608,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "H3")
+					(reference "H8")
 					(unit 1)
 				)
 			)
@@ -6626,7 +6626,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c6e7a6bd-c608-4ef7-b7a3-f6454713fc63")
-		(property "Reference" "C9"
+		(property "Reference" "C2"
 			(at 152.4 160.274 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6688,7 +6688,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "C9")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -7119,7 +7119,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e39d3ab4-5112-4ad3-b2be-80e802cbc938")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR03"
 			(at 39.37 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -7180,7 +7180,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "#PWR04")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -7197,7 +7197,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e5d39d66-04e1-47cc-91aa-cac9061292bd")
-		(property "Reference" "C8"
+		(property "Reference" "C10"
 			(at 257.048 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7261,7 +7261,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "C8")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -7279,7 +7279,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec76b25f-0bed-4e32-b9ef-0a7a2c30e66b")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR04"
 			(at 78.74 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -7339,7 +7339,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "#PWR01")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -7357,7 +7357,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f596c0c0-3ad3-4bf3-828a-98f65fb9c62f")
-		(property "Reference" "H4"
+		(property "Reference" "H9"
 			(at 260.35 69.8499 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7418,7 +7418,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/eaca7fd8-f393-449d-a4df-681d2188ea9b"
-					(reference "H4")
+					(reference "H9")
 					(unit 1)
 				)
 			)

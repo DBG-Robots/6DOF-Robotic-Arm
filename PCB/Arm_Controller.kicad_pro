@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 2.5,
-          "width": 4.4
+          "height": 1.75,
+          "width": 1.125
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -612,7 +612,7 @@
     "annotate_start_num": 0,
     "annotation": {
       "method": 0,
-      "sort_order": 1
+      "sort_order": 0
     },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
@@ -732,7 +732,7 @@
         "uuid": "2323d903-32ae-4da3-a89f-487023e10892"
       }
     ],
-    "used_designators": "D1-9,#PWR1-176,C1-69,FB1-2,F1-2,JP1-7,H1-34,J1-13,L1,R1-42,U1-10,USB1,Y1",
+    "used_designators": "D1-9,#PWR1-176,C1-69,JP1-7,H1-34,R1-42,U1-10,F1,FB1-2,J1-13,L1,USB1,Y1",
     "variants": []
   },
   "sheets": [
@@ -759,6 +759,30 @@
     [
       "b95fa2d1-f2ed-401b-b984-3832c1794be1",
       "Indicator"
+    ],
+    [
+      "ec99e49a-69cc-4f12-ae9f-b7d7d5f40c7e",
+      "TMC1"
+    ],
+    [
+      "84375e81-de8d-4916-898d-d40aa83dcecc",
+      "TMC2"
+    ],
+    [
+      "71c3437a-2f4c-4396-bf3c-d2e4d81b2045",
+      "TMC3"
+    ],
+    [
+      "53aacf52-914c-4ef3-9b7d-e3fc73a2482d",
+      "TMC4"
+    ],
+    [
+      "35f2765f-4ba3-48f5-8b02-e09198b2e4e9",
+      "TMC5"
+    ],
+    [
+      "60e73843-a60a-453b-b822-7fa78d209bf5",
+      "TMC6"
     ]
   ],
   "text_variables": {},

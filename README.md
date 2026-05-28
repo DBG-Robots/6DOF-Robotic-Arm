@@ -94,21 +94,23 @@ The ISO1042 is rated for CAN FD up to 5 Mbps. The board is currently configured 
 
 ### Power System
 
-Three 24 V power inputs feed the board, all ORed onto a shared 24 V bus:
+Three 24 V power inputs feed the board via a shared pre-fuse node (`VBAT_IN`), then through a 15 A / 50 V fuse onto the protected `+24V` bus:
 
-- **Robot power distribution board** — dedicated 2-pin connector from the robot's main power distribution board. Protected by a Schottky diode so no current can ever flow back into the distribution board, regardless of what else is connected.
+- **Robot power distribution board** — dedicated 2-pin connector. Protected by a Schottky diode (MBR1545, SMB package) so no current can ever flow back into the distribution board.
 - **Battery** — XT60 female connector on-board, intended for 6S LiPo (22.2 V nominal, 25.2 V max fully charged). Protected by a Schottky diode in the same way.
-- **J_PWR24V** — 2-pin 5 mm screw terminal. Accepts a standard 24 V DC supply (e.g. wall adapter with bare wires) or any external 24 V source. Also usable as a 24 V output tap (e.g. for a hotend heater). **No diode protection on this connector** — it connects directly to the 24 V bus. Polarity is marked clearly on silkscreen. Observe carefully: reverse polarity here will damage the board.
+- **J_PWR24V** — 2-pin 5 mm screw terminal. Accepts a standard 24 V DC supply or any external 24 V source. Also usable as a 24 V output tap. **No diode protection on this connector** — it connects directly to the `VBAT_IN` node ahead of the fuse. Polarity is marked clearly on silkscreen. Reverse polarity here will damage the board.
 
-A fuse rated 15 A / 50 V is placed after the diodes, before the bus. Only one power source should be connected at a time.
+All three sources meet at `VBAT_IN` before the fuse, so all input current passes through fuse protection regardless of which source is used. Only one power source should be connected at a time.
+
+> **Schottky diode note (MBR1545, D_SMB footprint):** Pin 1 = cathode, pin 2 = anode, pad 3 (thermal tab) = cathode. Pad 3 must be assigned the `VBAT_IN` net in KiCad — it is electrically the cathode and must not be left floating.
 
 #### 24 V Rail Protection
 
-The 24 V rail carries bulk decoupling and transient protection sized for the worst-case load of 6 simultaneously switching stepper drivers:
+The +24V bus carries decoupling and transient protection split across two locations — one cluster per driver bank — to minimise trace inductance to each group of three TMC2209s:
 
-- A large electrolytic bulk capacitor (1000 µF / 50 V) absorbs motor current transients
-- A ceramic capacitor in parallel handles high-frequency switching noise
-- A unidirectional TVS diode clamps transients to protect the TMC2209 drivers, which have a 29 V absolute maximum rating
+- A large electrolytic bulk capacitor (1000 µF / 50 V) placed centrally absorbs worst-case transients from all six drivers simultaneously
+- Two ceramic capacitors (100 nF / 50 V, 0603) — one per driver bank cluster — handle high-frequency switching noise locally
+- Two unidirectional TVS diodes (SMBJ26A) — one per driver bank cluster — clamp transients to protect the TMC2209 drivers, which have a 29 V absolute maximum rating
 
 #### 3.3 V Regulation
 
@@ -116,11 +118,11 @@ Two separate paths supply the 3.3 V rail depending on power source. Both feed th
 
 **Buck converter (24 V → 3.3 V), used during normal operation:**
 
-The buck converter output is nominally ~3.65 V. With approximately 0.30 V drop across the downstream Schottky diode at typical load, the STM32 VDD rail sits at approximately 3.35 V — within the 2.0 V–3.6 V operating range.
+Placed in the top-right area of the board, drawing from the +24V bus. The buck converter output is nominally ~3.65 V. With approximately 0.30 V drop across the downstream Schottky diode at typical load, the STM32 VDD rail sits at approximately 3.35 V — within the 2.0 V–3.6 V operating range. The 3.3 V output trace crosses the power plane split boundary on layer 1 to reach the 3V3 plane region under the MCU.
 
 **LDO (USB 5 V → 3.3 V), used during debug/programming only:**
 
-The LDO output is 3.3 V. With the Schottky drop (~0.30 V at typical load), the STM32 VDD rail sits at approximately 3.0 V — still within the operating range, but marginal. The LDO is low-efficiency, which is acceptable for the limited debug use case. USB power does not supply the motor drivers.
+Placed in the bottom-right area alongside the USB-C connector, minimising the VBUS trace length. The LDO output is 3.3 V. With the Schottky drop (~0.30 V at typical load), the STM32 VDD rail sits at approximately 3.0 V — still within the operating range, but marginal. USB power does not supply the motor drivers.
 
 > If exactly 3.3 V is required at the MCU, replace the Schottky diode with an ideal diode circuit, or remove the debug USB power path entirely.
 
@@ -137,7 +139,42 @@ Given the noisy 24 V environment (6 switching stepper drivers), the 3.3 V rail c
 
 ### USB
 
-Full-speed USB device on PA11 (DM) and PA12 (DP), clocked from HSI48. Intended for firmware flashing and debug only — does not power the motor drivers.
+Full-speed USB device on PA11 (DM) and PA12 (DP), clocked from HSI48. Intended for firmware flashing and debug only — does not power the motor drivers. USB-C connector placed bottom-right, adjacent to the LDO.
+
+---
+
+## PCB Layout
+
+### Layer Stack
+
+4-layer board:
+
+| Layer | Use |
+|---|---|
+| 1 — Top copper | Signal and power routing |
+| 2 — Power plane | Split: 24 V under motor outputs and power section (U-shape), 3V3 under MCU and logic |
+| 3 — GND plane | Unbroken ground reference across the full board |
+| 4 — Bottom copper | Signal routing |
+
+The power plane split boundary runs between the motor-side pads and logic-side pads of each TMC2209 footprint. The GND plane is never split.
+
+### Board Layout
+
+The board follows a U-shaped topology with a central logic section:
+
+- **Top edge** — Motors 4–6: screw terminals facing outward, TMC2209s below with 24 V side facing the edge and logic side facing inward
+- **Bottom edge** — Motors 1–3: same orientation mirrored
+- **Right-center** — Power input section: XT60 (VBAT), EXTN_PWR connector, J_PWR24V screw terminal, Schottky diodes D1/D2, fuse F1, bulk cap C13, ceramic caps and TVS diodes for each driver bank
+- **Top-right** — 24 V → 3.3 V buck converter
+- **Bottom-right** — USB-C connector and LDO (5 V → 3.3 V)
+- **Center** — STM32G431CBT6, 3.3 V filtering, crystal, decoupling
+- **Left edge** — CAN header and isolator (ISO1042DWVR), SWD debug header (J15), expansion headers, LED indicators
+
+### Power Plane Notes
+
+The 24 V plane covers the outer half of the board in a U-shape (top driver bank, power section, bottom driver bank). The 3.3 V plane occupies the inner-right region under the STM32, CAN isolator, and logic components. A copper-free gap separates the two regions; a single GND via stitch bridges them at one point to maintain a common ground reference without creating a loop.
+
+All TMC2209 footprints are oriented so motor output pads (A1, A2, B1, B2) sit over the 24 V plane and logic pads (STEP, DIR, UART, DIAG) sit over the 3.3 V plane. The plane split line runs through the gap between these pad clusters on each driver.
 
 ---
 
@@ -286,7 +323,9 @@ All test points use 2.0 mm round pads for power rails and 1.0 mm round pads for 
 - CAN connector pinout (Molex Pico-Lock 504050-0791) not yet defined for the robot-side harness.
 - Connector for robot power distribution board not yet selected — footprint TBD.
 - FDCAN timing parameters need recalculation after SYSCLK is confirmed at 170 MHz.
-- PCB layout not started.
+- PCB layout in progress — component placement largely complete, routing not yet started.
+- Diode footprints (D1, D2): pad 3 (thermal tab) must be assigned `VBAT_IN` net in KiCad before routing.
+- Buck converter and LDO placement pending final placement confirmation.
 - Firmware not started.
 - 3D mechanical design not started.
 

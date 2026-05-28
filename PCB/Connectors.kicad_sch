@@ -2204,145 +2204,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+24V"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "+24V"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+24V\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+24V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+24V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+3V3"
 			(power global)
 			(pin_numbers
@@ -2763,7 +2624,7 @@
 	)
 	(text "Power from an external Battery,\noutputting 24V (6S LiPo/Li-Ion/LiFePO4).\n\nBackfeed-Protected!"
 		(exclude_from_sim no)
-		(at 153.416 55.626 0)
+		(at 126.746 55.626 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2828,7 +2689,7 @@
 	)
 	(text "Power from any other\nuniversal source,\noutputting 24V\n\nNOT Backfeed-Protected.\nUse with caution\nAnd mind polarity!"
 		(exclude_from_sim no)
-		(at 220.218 58.166 0)
+		(at 173.228 58.166 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3013,7 +2874,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 45.72) (xy 222.25 46.99)
+			(xy 175.26 45.72) (xy 175.26 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3083,7 +2944,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 43.18) (xy 223.52 43.18)
+			(xy 175.26 43.18) (xy 176.53 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3113,7 +2974,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 45.72) (xy 222.25 45.72)
+			(xy 176.53 45.72) (xy 175.26 45.72)
 		)
 		(stroke
 			(width 0)
@@ -3133,7 +2994,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 43.18) (xy 156.21 43.18)
+			(xy 128.27 43.18) (xy 129.54 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3183,7 +3044,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 41.91) (xy 154.94 43.18)
+			(xy 128.27 41.91) (xy 128.27 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3473,7 +3334,7 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 45.72) (xy 154.94 45.72)
+			(xy 129.54 45.72) (xy 128.27 45.72)
 		)
 		(stroke
 			(width 0)
@@ -3493,7 +3354,7 @@
 	)
 	(wire
 		(pts
-			(xy 222.25 41.91) (xy 222.25 43.18)
+			(xy 175.26 41.91) (xy 175.26 43.18)
 		)
 		(stroke
 			(width 0)
@@ -3623,7 +3484,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 45.72) (xy 154.94 46.99)
+			(xy 128.27 45.72) (xy 128.27 46.99)
 		)
 		(stroke
 			(width 0)
@@ -4025,7 +3886,7 @@
 	)
 	(global_label "VBAT"
 		(shape output)
-		(at 154.94 41.91 90)
+		(at 128.27 41.91 90)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4035,7 +3896,7 @@
 		)
 		(uuid "34945806-9aa3-4021-a182-920b3fbafac2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.94 34.51 90)
+			(at 128.27 34.51 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4374,6 +4235,30 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+	)
+	(global_label "BIDIR_24V"
+		(shape bidirectional)
+		(at 175.26 41.91 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8a462ffa-cbbe-48e9-8cca-649472c0efd3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175.26 28.3187 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -4807,7 +4692,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0027017e-be36-45d9-bbcb-a41c0f00d815")
-		(property "Reference" "H12"
+		(property "Reference" "H10"
 			(at 55.88 118.1099 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4868,7 +4753,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "H12")
+					(reference "H10")
 					(unit 1)
 				)
 			)
@@ -4876,7 +4761,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 228.6 43.18 0)
+		(at 181.61 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4886,8 +4771,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02e3f7bc-121f-4d36-bbbc-f24627aab971")
-		(property "Reference" "J3"
-			(at 229.87 43.1799 0)
+		(property "Reference" "J9"
+			(at 182.88 43.1799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4898,7 +4783,7 @@
 			)
 		)
 		(property "Value" "PWR_24V"
-			(at 229.87 45.7199 0)
+			(at 182.88 45.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4909,7 +4794,7 @@
 			)
 		)
 		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm"
-			(at 228.6 43.18 0)
+			(at 181.61 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4920,7 +4805,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 43.18 0)
+			(at 181.61 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4931,7 +4816,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 228.6 43.18 0)
+			(at 181.61 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4950,7 +4835,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J3")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -5039,7 +4924,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Socket")
-		(at 161.29 43.18 0)
+		(at 134.62 43.18 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5049,8 +4934,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1190ee84-19c5-40b0-8060-ee2473f70b0e")
-		(property "Reference" "J2"
-			(at 162.56 43.1799 0)
+		(property "Reference" "J6"
+			(at 135.89 43.1799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5061,7 +4946,7 @@
 			)
 		)
 		(property "Value" "PWR_BATT"
-			(at 162.56 45.7199 0)
+			(at 135.89 45.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5072,7 +4957,7 @@
 			)
 		)
 		(property "Footprint" "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
-			(at 161.29 43.18 0)
+			(at 134.62 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5083,7 +4968,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.29 43.18 0)
+			(at 134.62 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5094,7 +4979,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 161.29 43.18 0)
+			(at 134.62 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5113,7 +4998,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J2")
+					(reference "J6")
 					(unit 1)
 				)
 			)
@@ -5131,7 +5016,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1888cb45-72f8-4d37-a5a4-455a68538243")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR015"
 			(at 91.44 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -5192,7 +5077,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR011")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -5210,7 +5095,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1b21b33d-af66-480d-8cfa-7762a5d9950d")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR014"
 			(at 91.44 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -5270,7 +5155,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR09")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -5368,7 +5253,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "26ff856d-cd09-44d3-abed-5d0c24f98a77")
-		(property "Reference" "J6"
+		(property "Reference" "J8"
 			(at 194.945 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5436,7 +5321,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J6")
+					(reference "J8")
 					(unit 1)
 				)
 			)
@@ -5455,7 +5340,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a9096ea-a992-47f4-a9f4-786042e945d9")
-		(property "Reference" "J11"
+		(property "Reference" "J13"
 			(at 267.335 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5523,7 +5408,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J11")
+					(reference "J13")
 					(unit 1)
 				)
 			)
@@ -5541,7 +5426,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e9504c3-45f6-4341-a53e-fd0d83122884")
-		(property "Reference" "H14"
+		(property "Reference" "H12"
 			(at 55.88 130.8099 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5602,7 +5487,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "H14")
+					(reference "H12")
 					(unit 1)
 				)
 			)
@@ -5777,7 +5662,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "326e4129-2b97-4705-839e-ab0481f25890")
-		(property "Reference" "H10"
+		(property "Reference" "H14"
 			(at 115.57 92.7099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5838,7 +5723,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "H10")
+					(reference "H14")
 					(unit 1)
 				)
 			)
@@ -5856,7 +5741,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "333463ca-907a-4fca-a2e6-306bb818be5e")
-		(property "Reference" "H13"
+		(property "Reference" "H11"
 			(at 55.88 124.4599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5917,7 +5802,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "H13")
+					(reference "H11")
 					(unit 1)
 				)
 			)
@@ -5935,7 +5820,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "36db1abb-10d6-4ace-91e0-e25314bca610")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR020"
 			(at 88.9 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -5996,7 +5881,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR017")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -6014,7 +5899,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b5354b5-cc85-422b-a06a-a0748fefcc42")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR018"
 			(at 93.98 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -6075,7 +5960,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR024")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -6093,7 +5978,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "409592af-1855-4bca-98da-61dc206df955")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR013"
 			(at 88.9 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -6153,7 +6038,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR020")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -6172,7 +6057,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4569aa3b-7366-4bc6-95a9-6ef0ae7232e1")
-		(property "Reference" "J10"
+		(property "Reference" "J11"
 			(at 229.235 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6240,7 +6125,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J10")
+					(reference "J11")
 					(unit 1)
 				)
 			)
@@ -6258,7 +6143,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "475d15f2-ce5b-4410-808f-6a3bbbb29784")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR012"
 			(at 49.53 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -6319,7 +6204,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR023")
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -6337,7 +6222,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60a2009f-957d-44ce-807a-1046546c14ed")
-		(property "Reference" "H11"
+		(property "Reference" "H15"
 			(at 115.57 102.8699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6398,7 +6283,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "H11")
+					(reference "H15")
 					(unit 1)
 				)
 			)
@@ -6416,7 +6301,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6863f516-732a-4577-82fc-365ea9b3ef99")
-		(property "Reference" "J4"
+		(property "Reference" "J2"
 			(at 66.04 100.6855 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6498,7 +6383,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J4")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -6516,7 +6401,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7cce3828-bdba-4c4b-9f1e-72bb4a2f78fc")
-		(property "Reference" "J1"
+		(property "Reference" "J3"
 			(at 99.06 43.1799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6580,7 +6465,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J1")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -6598,7 +6483,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7e930e75-5dd1-449a-9ecd-941951bccb91")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR010"
 			(at 44.45 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -6658,7 +6543,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR019")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -6676,7 +6561,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "81355809-cc18-474a-9fb7-6860466f16b6")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR021"
 			(at 88.9 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -6737,7 +6622,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR018")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -6755,7 +6640,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "892d1ab4-731c-4d01-a181-800bff02d8db")
-		(property "Reference" "J13"
+		(property "Reference" "J4"
 			(at 101.6 175.2599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6822,7 +6707,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J13")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -6840,7 +6725,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8f815247-4e90-4df4-b372-ed1e495fbdcc")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR09"
 			(at 30.48 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -6901,7 +6786,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR014")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -6919,7 +6804,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "92b24681-abc7-4883-a5d4-bb3b02be47e6")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR017"
 			(at 93.98 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -6979,85 +6864,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+24V")
-		(at 222.25 41.91 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "92f63f01-039b-4307-8abb-a3eeac715d5e")
-		(property "Reference" "#PWR010"
-			(at 222.25 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+24V"
-			(at 222.25 36.83 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 222.25 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 222.25 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+24V\""
-			(at 222.25 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6689b5eb-fd49-4726-9299-c06d706e243a")
-		)
-		(instances
-			(project "Arm_Controller"
-				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR010")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -7065,7 +6872,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 154.94 46.99 0)
+		(at 128.27 46.99 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7075,8 +6882,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b2957ece-78c5-4396-813a-c1e4f3cb2ad3")
-		(property "Reference" "#PWR012"
-			(at 154.94 53.34 0)
+		(property "Reference" "#PWR022"
+			(at 128.27 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7087,7 +6894,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 154.94 52.07 0)
+			(at 128.27 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7098,7 +6905,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 46.99 0)
+			(at 128.27 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7109,7 +6916,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 46.99 0)
+			(at 128.27 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7120,7 +6927,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 154.94 46.99 0)
+			(at 128.27 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7136,7 +6943,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR012")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -7154,7 +6961,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4eb4de5-f6fe-4f5e-9261-1c190ae7700e")
-		(property "Reference" "J12"
+		(property "Reference" "J1"
 			(at 57.15 175.2599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7221,7 +7028,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J12")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -7229,7 +7036,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 222.25 46.99 0)
+		(at 175.26 46.99 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7239,8 +7046,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cb635f14-2b6a-4487-99af-00906b89e407")
-		(property "Reference" "#PWR013"
-			(at 222.25 53.34 0)
+		(property "Reference" "#PWR024"
+			(at 175.26 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7251,7 +7058,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 222.25 52.07 0)
+			(at 175.26 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7262,7 +7069,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 222.25 46.99 0)
+			(at 175.26 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7273,7 +7080,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 222.25 46.99 0)
+			(at 175.26 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7284,7 +7091,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 222.25 46.99 0)
+			(at 175.26 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7300,7 +7107,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR013")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -7318,7 +7125,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d6996a34-f969-4885-b012-7699deb5d403")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR016"
 			(at 93.98 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -7378,7 +7185,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR015")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -7396,7 +7203,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d9e82b54-8cbb-407a-b264-040621846f67")
-		(property "Reference" "H15"
+		(property "Reference" "H13"
 			(at 55.88 137.1599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7457,7 +7264,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "H15")
+					(reference "H13")
 					(unit 1)
 				)
 			)
@@ -7673,7 +7480,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e7fbd087-4efb-4c93-b878-5e9574c9529d")
-		(property "Reference" "J7"
+		(property "Reference" "J10"
 			(at 229.235 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7741,7 +7548,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J7")
+					(reference "J10")
 					(unit 1)
 				)
 			)
@@ -7760,7 +7567,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec500008-0416-4679-912c-bab6bb660af9")
-		(property "Reference" "J8"
+		(property "Reference" "J12"
 			(at 267.335 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7828,7 +7635,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J8")
+					(reference "J12")
 					(unit 1)
 				)
 			)
@@ -7846,7 +7653,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f03548c2-8324-43c2-94e1-fe421add5a88")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR011"
 			(at 49.53 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -7906,7 +7713,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR021")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -7925,7 +7732,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f0737ecc-e86e-40ab-9376-691bfe96c065")
-		(property "Reference" "J9"
+		(property "Reference" "J7"
 			(at 193.675 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7993,7 +7800,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "J9")
+					(reference "J7")
 					(unit 1)
 				)
 			)
@@ -8011,7 +7818,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa9097bc-ae79-4489-a6d8-6da0c3df5cdd")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR019"
 			(at 88.9 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -8072,7 +7879,7 @@
 		(instances
 			(project "Arm_Controller"
 				(path "/2323d903-32ae-4da3-a89f-487023e10892/18ed9fa6-eb32-4aec-93af-f9e24489c894"
-					(reference "#PWR016")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)

@@ -152,8 +152,8 @@ Full-speed USB device on PA11 (DM) and PA12 (DP), clocked from HSI48. Intended f
 | Layer | Use |
 |---|---|
 | 1 — Top copper | Signal and power routing |
-| 2 — Power plane | Split: 24 V under motor outputs and power section (U-shape), 3V3 under MCU and logic |
-| 3 — GND plane | Unbroken ground reference across the full board |
+| 2 — GND plane | Unbroken ground reference across the full board |
+| 3 — Power plane | Split: 24 V under motor outputs and power section (U-shape), 3V3 under MCU and logic |
 | 4 — Bottom copper | Signal routing |
 
 The power plane split boundary runs between the motor-side pads and logic-side pads of each TMC2209 footprint. The GND plane is never split.
